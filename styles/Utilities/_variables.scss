@@ -1,0 +1,24 @@
+// FONTS
+$font-family: 'Helvetica Neue', 'Roboto', sans-serif;
+
+//FONT-SIZE
+$title-lg: 3rem;
+$title-md: 2rem;
+$content-lg: 1.375rem;
+$content-md: 1rem;
+$content-sm: 0.75rem;
+
+// COLORS
+$primary-color: #174dba;
+$light-gray: #EFF0F3;
+$white: white;
+$dark-gray: #505050;
+
+//BORDER
+$br-radius: 0.3rem;
+
+//MIXINS
+@mixin hover-effect {
+    filter: brightness(1.2);
+    transition: all 0.15s linear;
+}

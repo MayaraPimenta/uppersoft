@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 68%;
+  height: auto;
+
+  margin-top: 4rem;
+
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+
+    h1 {
+      padding: 2rem 0 0.5rem 0;
+      font-size: $title-md;
+    }
+  }
+
+  .users-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .card-user {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background: $white;
+
+      width: 24rem;
+      height: 17rem;
+
+      margin-bottom: 4rem;
+
+      border-radius: $br-radius;
+
+      .edit-img {
+        width: 1.5rem;
+        top: -1.5rem;
+        right: -10.5rem;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .profile-img {
+        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        overflow: hidden;
+        position: relative;
+
+        margin-bottom: 0.8rem;
+
+        img {
+          position: absolute;
+          width: 100%;
+        }
+      }
+
+      h2 {
+        color: $primary-color;
+        font-size: $content-lg;
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .users-onscreen {
+    display: flex;
+    justify-content: flex-end;
+    
+  } 
+}
+@media only screen and (min-width: 1980px) {
+  body {
+    .container {
+      width: 56%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+
+  .header {
+    height: 3rem;
+
+    #logo {
+      height: 2.2rem;
+    }
+  }
+
+  .container {
+    width: 63%;
+    margin-top: 3rem;
+
+    .title {
+      h1 {
+        font-size: 1.6rem;
+        padding-top: 1.7rem;
+      }
+    }
+    .users-list {
+      .card-user {
+        width: 16rem;
+        height: 11rem;
+        margin-bottom: 2rem;
+  
+        .edit-img {
+          width: 1.2rem;
+          top: 0.5rem;
+          right: -6.9rem;
+        }
+  
+        .profile-img {
+          width: 3.5rem;
+          height: 3.5rem;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    }
+  }
+
+@media only screen and (max-width: 853px) and (min-width: 550px) {
+    .container {
+      margin-top: 90rem;
+      .users-list {
+        .card-user {
+          width: 54rem;
+          height: 18rem;
+    
+          .edit-img {
+            width: 1.5rem;
+            top: 10rem;
+            right: 0.3rem;
+          }
+    
+          p {
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+}
+  
+@media only screen and (max-width: 550px) {
+  .container {
+    margin-top: 55rem;
+    .users-list {
+      .card-user {
+        width: 22rem;
+        height: 14rem;
+
+        .edit-img {
+          top: 9.5rem;
+          right: 0.3rem;
+        }
+      }
+    }
+  }
+}

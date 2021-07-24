@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <title>Uppersoft</title>
+</head>
+<body>
+    <header class="header">
+        <img src="../assets/logo-uppersoft.png" alt="Logo Uppersoft" id="logo" onclick="location.href='/'">
+    </header>
+    <main class="main-cadastro">
+            <h1>Cadastro</h1>
+            <form class="form-input">
+                <div class="name">
+                    <label for="name">Nome Completo</label>
+                    <input type="text" name="name" id="name">   
+                </div>
+                <div class="email">
+                    <label for="email-cad">E-mail</label>
+                    <input type="email" name="email-cad" id="email-cad">
+                </div>
+                <div class="state">
+                    <label for="state">Estado</label>
+                <select id="estado" name="state">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select>
+                </div>
+                <div class="gender-radio">
+                    <label for="gender" class="gender-sex">Sexo</label>
+                    <div>
+                        <input type="radio" id="female" name="gender" value="female" class="gender">
+                        <label for="female" class="gender">Feminino</label>
+                        <input type="radio" id="male" name="gender" value="male" class="gender">
+                        <label for="male" class="gender">Masculino</label>
+                        <input type="radio" id="other" name="gender" value="other" class="gender">
+                        <label for="other" class="gender">Outro</label>
+                    </div>
+                </div>
+                <div class="new-password">
+                    <label for="new-password">Senha</label>
+                    <input type="password" name="new-password" id="new-password">
+                    <span class="lnr lnr-eye"></span>
+                    <p>A senha deve ter no mínimo 6 caracteres</p>
+                </div>
+                <div class="confirm-password">
+                    <label for="confirm-password">Confirmar senha</label>
+                    <input type="password" name="confirm-password" id="confirm-password">
+                    <span class="lnr lnr-eye"></span> 
+                </div>
+            </form>
+            <div class="register-return">
+                <button id="register" onclick="location.href='/'">CADASTRAR</button>
+                <p id="return">Já possui conta? <a href="/">Entre aqui</a></p>
+            </div>
+            
+    </main>
+    <div></div>
+</body>
+</html>
