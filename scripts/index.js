@@ -1,17 +1,46 @@
 function login() {
+    //INPUT DE DADOS
     const email = document.querySelector('#email').value;
     const password = document.querySelector('#password').value;
-    let modal = document.querySelector('.modal-overlay');
-
+    
+    //VALIDANDO CAMPOS VAZIOS
     if (email === "" || password === "") {
-        modal.classList.add('show-modal')   
-    } else {
-        location.href = "/lista-usuarios"
+        showModal('Todos os campos devem ser preenchidos.')
+        return
     }
 
-    const closeBtn = document.querySelector(".close-modal")
-    closeBtn.addEventListener('click', () => {
-        modal.classList.remove('show-modal')
-    })
+    //CHECANDO EMAIL NO SESSION STORAGE
+    const sessionUsers = JSON.parse(sessionStorage.getItem('users'))
+
+    const userExists = sessionUsers.find( user => user.email == email && user.password == password)
+    if (userExists == undefined) {
+        showModal('Email ou senha incorreto')
+        return
+    }
+
+    location.href = "/lista-usuarios"
 }
 
+//MOSTRAR SENHA
+let btn = document.querySelector('.lnr-eye')
+
+btn.addEventListener('click', () => {
+    let input = document.querySelector('#password');
+    if(input.getAttribute('type') == 'password') {
+        input.setAttribute('type', 'text');
+    } else {
+        input.setAttribute('type', 'password');
+    }
+});
+
+function showModal(text) {
+    let modal = document.querySelector('.modal-overlay');
+
+    document.querySelector('#modal-text').innerHTML = text
+        modal.classList.add('show-modal')
+
+        //FECHAR MODAL
+        const closeBtn = document.querySelector(".close-modal")
+        closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show-modal')})
+}

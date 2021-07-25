@@ -26,6 +26,7 @@
                 <div class="state">
                     <label for="state">Estado</label>
                 <select id="state" name="state">
+                    <option value=""></option>
                     <option value="AC">Acre</option>
                     <option value="AL">Alagoas</option>
                     <option value="AP">Amapá</option>
@@ -69,13 +70,13 @@
                 </div>
                 <div class="new-password">
                     <label for="new-password">Senha</label>
-                    <input type="password" name="new-password" id="new-password">
+                    <input type="password" name="new-password" id="new-password"/>
                     <span class="lnr lnr-eye"></span>
                     <p>A senha deve ter no mínimo 6 caracteres</p>
                 </div>
                 <div class="confirm-password">
                     <label for="confirm-password">Confirmar senha</label>
-                    <input type="password" name="confirm-password" id="confirm-password">
+                    <input type="password" name="confirm-password" id="confirm-password"/>
                     <span class="lnr lnr-eye"></span> 
                 </div>
             </form>
@@ -87,7 +88,7 @@
     <div class="modal-overlay">
         <div class="modal-box">
             <button class="close-modal">X</button>
-            <p>Cadastro realizado!</p>
+            <p id="modal-text"></p>
         </div>
     </div>
     <script src="../scripts/cadastro.js"></script>
