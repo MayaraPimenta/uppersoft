@@ -1,7 +1,7 @@
 function register() {
     //CHECAR RADIO IS CHECKED
-    if (!document.querySelector('#gender').checked) {
-        showModal("Preencha todos os campos")
+    if (!document.querySelector('input[name="gender"]:checked')) {
+        showModal("Preencha todos os campos.")
         return
     }
 
@@ -12,6 +12,7 @@ function register() {
         state: document.querySelector('#state').value,
         gender: document.querySelector('#gender:checked').value,
         password: document.querySelector("#new-password").value,
+        confirmPassword: document.querySelector('#confirm-password').value,
     };
     
     let usersLocalStorage = JSON.parse(sessionStorage.getItem('users'));
@@ -21,19 +22,29 @@ function register() {
     let objValues = Object.values(registeredUser)
     for (i = 0; i <= objValues.length; i++) {
         if (objValues[i] == "" ) {
-            return showModal("Preencha todos os campos")
+            return showModal("Preencha todos os campos.")
         }
+    }
+
+    // VERIFICANDO CONFIRMAÇÃO DE SENHA
+    if (registeredUser.password !== registeredUser.confirmPassword) {
+        return showModal('Senhas não conferem, tente novamente.')
+    }
+
+    //VERIFICANDO LENGTH DA SENHAS
+    if (registeredUser.password.length < 6) {
+        return showModal('Senha muito pequena, tente novamente')
     }
 
     //VERIFICANDO EMAIL JÁ CADASTRADO
     if (newUser.some(user => user.email == registeredUser.email)) {
-        showModal("E-mail já cadastrado")
-        return
+        return showModal("E-mail já cadastrado.")
     } 
         location.href = "/"  
 
         newUser.push(registeredUser) 
-        sessionStorage.setItem('users', JSON.stringify(newUser))  
+        sessionStorage.setItem('users', JSON.stringify(newUser))
+        
 }
 
 //FUNÇÃO MODAL
@@ -50,13 +61,15 @@ function showModal(text) {
 }
 
 //VISUALIZAR SENHA
-let btn = document.querySelector('.lnr-eye')
+let btn = document.querySelectorAll('.lnr-eye')
 
-btn.addEventListener('click', function() {
-    let input = document.querySelector('#new-password');
-    if(input.getAttribute('type') == 'password') {
-        input.setAttribute('type', 'text');
-    } else {
-        input.setAttribute('type', 'password');
-    }
-});
+btn.forEach((e) => {
+    e.addEventListener('click', function() {
+        let input = this.parentElement.children[1];
+        if(input.getAttribute('type') == 'password') {
+            input.setAttribute('type', 'text');
+        } else {
+            input.setAttribute('type', 'password');
+        }
+    });
+})

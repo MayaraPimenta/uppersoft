@@ -57,12 +57,15 @@ body {
           color: $primary-color;
           padding-left: 0;
 
-          .lnr-eye {
-            top: 21.4rem;
-            right: 35.6rem;
+          .lnr-eye { 
+            position: relative; 
+            top: -2.6rem;
+            right: -6.6rem;
             font-size: 1rem;
-          }
+          } 
+        }
+          
       }
   }
-
-}
+  
+  

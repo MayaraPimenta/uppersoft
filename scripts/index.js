@@ -11,13 +11,17 @@ function login() {
 
     //CHECANDO EMAIL NO SESSION STORAGE
     const sessionUsers = JSON.parse(sessionStorage.getItem('users'))
-
-    const userExists = sessionUsers.find( user => user.email == email && user.password == password)
-    if (userExists == undefined) {
-        showModal('Email ou senha incorreto')
+    if (sessionUsers == null ) {
+        showModal('Login não encontrado, cadastre-se.')
         return
     }
 
+    const userExists = sessionUsers.find( user => user.email == email && user.password == password)
+    if (userExists == undefined) {
+        showModal('Email ou senha incorreto.')
+        return
+    }
+    sessionStorage.setItem('loggedIn', true)
     location.href = "/lista-usuarios"
 }
 

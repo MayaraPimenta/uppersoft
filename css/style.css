@@ -88,8 +88,9 @@ body .form-group .form-input {
   padding-left: 0;
 }
 body .form-group .form-input .lnr-eye {
-  top: 21.4rem;
-  right: 35.6rem;
+  position: relative;
+  top: -2.6rem;
+  right: -6.6rem;
   font-size: 1rem;
 }
 
@@ -97,7 +98,7 @@ body .form-group .form-input .lnr-eye {
   background: #174dba;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   width: 100vw;
   height: 4rem;
   position: fixed;
@@ -108,6 +109,15 @@ body .form-group .form-input .lnr-eye {
   height: 3rem;
   width: auto;
   padding: 0.7rem;
+}
+.header a {
+  text-decoration: none;
+  color: #EFF0F3;
+  cursor: pointer;
+}
+.header a:hover {
+  filter: brightness(1.2);
+  transition: all 0.15s linear;
 }
 
 h1 {
@@ -158,6 +168,7 @@ p {
 p a {
   text-decoration: none;
   color: #174dba;
+  cursor: pointer;
 }
 p:hover {
   filter: brightness(1.2);
@@ -306,7 +317,7 @@ body .register-return #return {
   display: flex;
   flex-direction: column;
   width: 68%;
-  height: auto;
+  height: 98%;
   margin-top: 4rem;
 }
 .container .title {
@@ -364,6 +375,7 @@ body .register-return #return {
 .container .users-onscreen {
   display: flex;
   justify-content: flex-end;
+  text-align: end;
 }
 
 @media only screen and (min-width: 1980px) {
@@ -372,65 +384,58 @@ body .register-return #return {
   }
 }
 @media only screen and (max-width: 1440px) {
-  .header {
+  body .header {
     height: 3rem;
   }
-  .header #logo {
+  body .header #logo {
     height: 2.2rem;
   }
-
-  .container {
+  body .container {
     width: 63%;
     margin-top: 3rem;
   }
-  .container .title h1 {
+  body .container .title h1 {
     font-size: 1.6rem;
     padding-top: 1.7rem;
   }
-  .container .users-list .card-user {
+  body .container .users-list .card-user {
     width: 16rem;
     height: 11rem;
     margin-bottom: 2rem;
   }
-  .container .users-list .card-user .edit-img {
+  body .container .users-list .card-user .edit-img {
     width: 1.2rem;
     top: 0.5rem;
     right: -6.9rem;
   }
-  .container .users-list .card-user .profile-img {
+  body .container .users-list .card-user .profile-img {
     width: 3.5rem;
     height: 3.5rem;
   }
-  .container .users-list .card-user h2 {
+  body .container .users-list .card-user h2 {
     font-size: 1.2rem;
   }
 }
-@media only screen and (max-width: 853px) and (min-width: 550px) {
-  .container {
-    margin-top: 90rem;
-  }
-  .container .users-list .card-user {
+@media only screen and (max-width: 853px) and (min-width: 551px) {
+  body .container .users-list .card-user {
     width: 54rem;
     height: 18rem;
   }
-  .container .users-list .card-user .edit-img {
+  body .container .users-list .card-user .edit-img {
     width: 1.5rem;
     top: 10rem;
     right: 0.3rem;
   }
-  .container .users-list .card-user p {
+  body .container .users-list .card-user p {
     margin-bottom: 4rem;
   }
 }
 @media only screen and (max-width: 550px) {
-  .container {
-    margin-top: 55rem;
-  }
-  .container .users-list .card-user {
+  body .container .users-list .card-user {
     width: 22rem;
     height: 14rem;
   }
-  .container .users-list .card-user .edit-img {
+  body .container .users-list .card-user .edit-img {
     top: 9.5rem;
     right: 0.3rem;
   }

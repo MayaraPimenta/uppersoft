@@ -4,7 +4,7 @@
     
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     width: 100vw;
     height: 4rem;
@@ -14,10 +14,21 @@
     top: 0;
     
 
-        #logo {
+    #logo {
         height: 3rem;
         width: auto;
         padding: 0.7rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $light-gray;
+        cursor: pointer;
+
+        &:hover {
+            filter: brightness(1.2);
+            transition: all 0.15s linear;
+        }
     }
 }
 

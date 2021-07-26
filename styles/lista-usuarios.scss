@@ -8,7 +8,7 @@
   flex-direction: column;
 
   width: 68%;
-  height: auto;
+  height: 98%;
 
   margin-top: 4rem;
 
@@ -83,9 +83,11 @@
   .users-onscreen {
     display: flex;
     justify-content: flex-end;
+    text-align: end;
     
   } 
 }
+
 @media only screen and (min-width: 1980px) {
   body {
     .container {
@@ -95,7 +97,7 @@
 }
 
 @media only screen and (max-width: 1440px) {
-
+body {
   .header {
     height: 3rem;
 
@@ -136,25 +138,29 @@
         }
       }
     }
-    }
   }
+}
+  
+}
 
-@media only screen and (max-width: 853px) and (min-width: 550px) {
-    .container {
-      margin-top: 90rem;
-      .users-list {
-        .card-user {
-          width: 54rem;
-          height: 18rem;
+@media only screen and (max-width: 853px) and (min-width: 551px) {
+    body {
     
-          .edit-img {
-            width: 1.5rem;
-            top: 10rem;
-            right: 0.3rem;
-          }
-    
-          p {
-            margin-bottom: 4rem;
+      .container {
+        .users-list {
+          .card-user {
+            width: 54rem;
+            height: 18rem;
+      
+            .edit-img {
+              width: 1.5rem;
+              top: 10rem;
+              right: 0.3rem;
+            }
+      
+            p {
+              margin-bottom: 4rem;
+            }
           }
         }
       }
@@ -162,18 +168,21 @@
 }
   
 @media only screen and (max-width: 550px) {
-  .container {
-    margin-top: 55rem;
-    .users-list {
-      .card-user {
-        width: 22rem;
-        height: 14rem;
+  body {
+    .container {
+        .users-list {
+          .card-user {
+            width: 22rem;
+            height: 14rem;
 
-        .edit-img {
-          top: 9.5rem;
-          right: 0.3rem;
+            .edit-img {
+              top: 9.5rem;
+              right: 0.3rem;
+            }
+          }
         }
       }
-    }
   }
+      
 }
+  
