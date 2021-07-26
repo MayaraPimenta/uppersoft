@@ -28,11 +28,10 @@ Teste realizado por Mayara Luiza Rodrigues Pimenta para vaga de desenvolvimento 
 - Pacotes NPM utilizados: Express, npm-run-all, Sass
 
 ## Rodando a Aplicação
-´´´http
-npm install
-node index.js
-A aplicação está rodando na porta 3000
-´´´
+- npm install
+- node index.js
+- A aplicação está rodando na porta 3000
+
 ## Authors
 
 - [@MayaraPimenta](https://github.com/MayaraPimenta)
