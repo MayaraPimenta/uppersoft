@@ -32,6 +32,7 @@ Teste realizado por Mayara Luiza Rodrigues Pimenta para vaga de desenvolvimento 
 - npm install
 - node index.js
 - A aplicação está rodando na porta 3000
+Ps. Não é possível logar sem criar um cadastro antes 
 
 
 ## Authors
